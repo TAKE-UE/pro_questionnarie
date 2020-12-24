@@ -1,0 +1,45 @@
+html {
+  font-size: 62.5%; /* 10px */
+}
+
+
+.headaer ul{
+ list-style-type: none;
+}
+
+.headaer li{
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 0;
+  width: 30%;
+  font-size: 1.4rem;
+}
+
+.container {
+  font-size: 1.6rem;
+  width: 400px;
+  margin: 20px auto;
+}
+
+.ans {
+  border: 1px solid rgb(150, 150, 150);
+  width: 40%;
+  margin: 10px auto;
+  position: relative;
+}
+
+#question {
+  border: none;
+}
+
+select {
+  border: 1px solid rgb(150, 150, 150);
+  width: 100%;
+}
+
+.footer {
+  font-size: 1.4rem;
+  width: 400px;
+  margin: 20px auto;
+}
