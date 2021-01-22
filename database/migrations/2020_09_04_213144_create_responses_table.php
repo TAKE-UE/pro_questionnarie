@@ -16,7 +16,7 @@ class CreateResponsesTable extends Migration
         Schema::create('responses', function (Blueprint $table) {
             $table->id();
             $table->integer('response')->nullable(false)->comment('反応');
-            $table->foreignId('answer_id')->constrained('')->onDelete('cascade')->onUpdate('cascade')->comment('回答欄ID');
+            $table->foreignId('answer_id')->constrained('answers')->onDelete('cascade')->onUpdate('cascade')->comment('回答欄ID');
             $table->timestamps();
             $table->index('id');
             $table->index('answer_id');
