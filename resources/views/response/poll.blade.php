@@ -8,9 +8,6 @@
 @section('title', 'ゆるいあんけーと')
 
 @section('headaer')
-  <ul>
-    <li><a href="{{ url('/posts/list') }}">アンケート一覧</a></li>
-  </ul>
 @endsection
 
 @section('content')
@@ -21,7 +18,7 @@
       <ul>
         <li>
         <input type="hidden" name="question_id" value="{{ $details->id }}">
-        <button type="submit" name="answer" value="{{ $detail->id }}">{{ $detail->answer }}</button>
+        <button type="submit" name="answer" class="btn btn-outline-dark" value="{{ $detail->id }}">{{ $detail->answer }}</button>
         </li>
       </ul>
     @endforeach

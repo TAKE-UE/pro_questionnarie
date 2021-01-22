@@ -35,13 +35,11 @@ class PostCheck
         //setしたcookieの値を変数に
         $reqcookie = Questionnaire::where('id', $master_id)->value('id');
         //
-        if ($deta_time_response >= 168 || $rescookie === "setresponcookie".$reqcookie){
-            return $next($request);
-                }
+        if ($deta_time_response >= 168 || $rescookie === "setresponcookie".$reqcookie){return $next($request);}
             //リダイレクト先にパラメーターを渡す
             return redirect(route('poll.id', [
                 $master_id
             ]));
-            }
+    }
     
 }
