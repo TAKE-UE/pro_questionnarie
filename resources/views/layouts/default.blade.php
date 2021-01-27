@@ -11,14 +11,14 @@
   <div>
     @yield('headaer')
     @guest
-          <nav class="navbar navbar-expand-md navbar-light justify-content-end bg-light shadow-sm">
+          <nav class="navbar navbar-expand-lg navbar-light justify-content-end bg-light shadow-sm ">
             <div class="container-fluid">
               <a class="navbar-brand" href="#"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
               <div class="collapse navbar-collapse justify-content-end pr-5" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
+                <div class="navbar-nav ">
                   <a class="nav-item nav-link" href="{{ url('/posts/list') }}">アンケート一覧<span class="sr-only">(current)</span></a>
                   <a class="nav-item nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                   <a class="nav-item nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
@@ -50,7 +50,7 @@
           </nav>
       @endguest
   </div>
-  <div class="container-fluid col-lg-12 row1">
+  <div class="container-fluid col-sm-12 row1">
     @yield('content')
   </div>
   <div class="footer">
