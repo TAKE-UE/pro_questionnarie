@@ -17,8 +17,8 @@
     @foreach ($details->answers as $detail)
       <ul>
         <li>
-        <input type="hidden" name="question_id" value="{{ $detail->id }}">
-        <button type="submit" name="answer" class="btn btn-outline-dark">{{ $detail->answer }}</button>
+        <input type="hidden" name="question_id" value="{{ $details->id }}">
+        <button type="submit" name="answer" value="{{ $detail->id }}" class="btn btn-outline-dark">{{ $detail->answer }}</button>
         </li>
       </ul>
     @endforeach
