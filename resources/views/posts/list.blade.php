@@ -32,7 +32,7 @@
 @endsection
 
 @section('content')
-  <ul>
+  <ul class="list">  
     @forelse ($questiones as $question)
       <li>
       <a href="{{ action('PostController@details', $question->id) }}">{{ $question->question }}</a>

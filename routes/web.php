@@ -14,12 +14,12 @@ use App\Http\Middleware\PostCheck;
 |
 */
 
-Route::get('/', 'PostController@index');
+Route::get('/', 'PostController@index')->name('index');
 Route::get('/posts/{id}', 'PostController@store')->where('id', '[0-9]+');
 Route::get('/posts/show/{id}', 'PostController@show');
 Route::post('/posts/create', 'PostController@create');
 Route::post('/posts/deleted{id}', 'PostController@deleted');
-Route::get('/posts/list', 'PostController@list');
+Route::get('/posts/list', 'PostController@list')->name('list');
 Route::get('/posts/details/{id}', 'PostController@details')->name('details')->middleware(PostCheck::class);
 Route::get('/response/poll/{id}', 'ResponseController@poll')->name('poll.id');
 Route::post('/response/poll', 'ResponseController@responsePoll');

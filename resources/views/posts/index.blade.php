@@ -46,9 +46,9 @@
           <div><label for="">時間：<select name="time" id="time"></select></label></div>
           <div><label for="">分：<select name="minute" id="minute"></select></label></div>
         </div> -->
-        <p>
+        
         <button value="アンケート作成" class="btn btn-outline-secondary">アンケート作成</button>
-        </p>
+        
     </form>
 @endsection
 
