@@ -13,31 +13,33 @@ class HomeControllerTest extends TestCase
      *
      * @return void
      */
-    public function testLoginView()
-    {
-        $response = $this->get('/login');
-        $response->assertStatus(200);
-        //認証されてないことを確認
-        $this->assertGuest();
-        
-        // $response = $this->post('login', [
-        //     'email' => $user->email,
-        //     'password' => 'password'
-        // ]);
-
-        // $response->assertStatus(200)
-        // ->assertViewIs('home')
-        // ->assertSee('制作したアンケート一覧');
-    }
     /**
+    * public function testLoginView()
+    * {
+    *    $response = $this->get('/login');
+    *    $response->assertStatus(200);
+    *    //認証されてないことを確認
+    *    $this->assertGuest();
+    *    
+    *    // $response = $this->post('login', [
+    *    //     'email' => $user->email,
+    *    //     'password' => 'password'
+    *    // ]);
+
+    *    // $response->assertStatus(200)
+    *    // ->assertViewIs('home')
+    *    // ->assertSee('制作したアンケート一覧');
+    * }
+    
      * ダッシュボードアクセス（ログイン画面へリダイレクト）
-     */
-    public function testLoginAccess()
-    {
-        $response = $this->get('/home');
-        $response = $this->assertStatus(302)
-                         ->assertRedirect('/login');//リダイレクト先を確認
-                         //承認されてないことを確認
-                    $this->assertGuest();
-    }
+    
+    * public function testLoginAccess()
+    * {
+    *    $response = $this->get('/home');
+    *    $response = $this->assertStatus(302)
+    *                     ->assertRedirect('/login');//リダイレクト先を確認
+    *                     //承認されてないことを確認
+    *                $this->assertGuest();
+    * }
+    */
 }
