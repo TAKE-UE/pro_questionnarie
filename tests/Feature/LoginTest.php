@@ -5,10 +5,13 @@ namespace Tests\Feature;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
-use DatabaseMigrations;
+use App\User;
+// use DatabaseMigrations;
 
 class LoginTest extends TestCase
 {
+    //データベースリセット（マイグレーションを使用している場合有効）
+    use RefreshDatabase;
     /**
      * A basic feature test example.
      *
@@ -46,10 +49,11 @@ class LoginTest extends TestCase
             // 認証されてないことを確認
             $this->assertGuest();
             // ダミーログイン
-            $response = $this->dummyLogin();
+            $user = factory(User::class)->create();
+            $response = $this->actingAs($user)->get('/home');
             $response->assertStatus(200);
             // 認証を確認
-            $this->aseertAuthenticated();
+            $this->assertAuthenticated();
         }
     
         // $response = $this->get('/');
